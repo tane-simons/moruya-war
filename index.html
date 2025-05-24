@@ -3,15 +3,110 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Moruya War Museum</title>
-        <meta name="description" content="The Moruya War Museum aims to preserve Moruya’s wartime history, honouring the service and sacrifice of the allied soldiers, sailors, and airmen who served here.">
-        <meta name="keywords" content="moruya, war, museum, no11, raaf, royal australian air force, durenbee, iron knight, u-862, ww2, ww1, bunker, no11 operational base unit">
+        <title>When War Came to Moruya</title>
+        <meta name="description" content="'When War Came to Moruya' aims to preserve Moruya’s wartime history, honouring the service and sacrifice of the allied soldiers, sailors, and airmen who served here.">
+        <meta name="keywords" content="when war came to moruya, moruya war, moruya, war, museum, no11, raaf, royal australian air force, durenbee, iron knight, u-862, ww2, ww1, bunker, no11 operational base unit">
         <meta name="author" content="Tāne Simons">
         <link rel="icon" href="/media/logo.PNG" type="image/x-icon">
-        <link href="" rel="stylesheet">
+        <link href="/reset.css" rel="stylesheet">
         <link href="/styles.css" rel="stylesheet">
+        <script defer src="/script.js"></script>
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="" class="nav-page">History</a></li>
+                    <li><a href="" class="nav-page">Events</a></li>
+                    <li><a href="" class="nav-page">About</a></li>
+                    <li><a href="" class="nav-page">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="hero">
+                <video autoplay muted loop>
+                    <source src="/media/bg-video.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay">
+                    <h1>
+                        When War Came<br>to Moruya
+                    </h1>
+                    <a href="#jump">
+                        <img src="media/icons/chevron-down.svg">
+                    </a>
+                </div>
+            </div>
+            <div id="jump"></div>
+            <section class="featured">
+                <h2>Upcoming Events</h2>
+                <div class="card-container">
 
+                    <div class="card" data-link="/events/vp-day.html"">
+                        <h3>
+                            VP Day
+                        </h3>
+                        <div class="date-range">
+                            <time datetime="2025-08-15">15th Aug</time> -
+                            <time datetime="2025-08-17">17th Aug</time>
+                        </div>
+                        <div class="booking-cta">
+                            <a href="">
+                                Book Tickets
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card" data-link="/events/example.html"">
+                        <h3>
+                            Event 2
+                        </h3>
+                        <div class="date-range">
+                            <time datetime="0000-00-00">00th 000</time> -
+                            <time datetime="0000-00-00">00th 000</time>
+                        </div>
+                        <div class="booking-cta">
+                            <a href="">
+                                Book Tickets
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section class="featured">
+                <h2>Featured Articles</h2>
+                <div class="card-container">
+
+                    <div class="card article" data-link="/articles/example.html"">
+                        <h3>
+                            SS. Iron Knight
+                        </h3>
+                        <p>
+                            Read More >
+                        </p>
+                    </div>
+
+                    <div class="card article" data-link="/articles/example.html"">
+                        <h3>
+                            Article 2
+                        </h3>
+                    </div>
+
+                    <div class="card article" data-link="/articles/example.html"">
+                        <h3>
+                            Article 3
+                        </h3>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <footer>
+            <hr>
+            <div class="footer-content">
+                <p>Designed by Tāne Simons</p>
+            </div>
+        </footer>
     </body>
 </html>

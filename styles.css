@@ -1,0 +1,221 @@
+:root {
+    --primary-color: #efebe0;
+    --secondary-color: #121212;
+}
+
+@font-face {
+    font-family: 'Playfair Display Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/playfair-display:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+}
+
+@font-face {
+    font-family: 'Montserrat Variable';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(https://cdn.jsdelivr.net/fontsource/fonts/montserrat:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.hero {
+    height: 100svh;
+}
+
+.hero video {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+    z-index: -1;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0);
+    transition: background-color 0.3s linear;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+    padding: 1vw;
+}
+
+.nav-page {
+    line-height: 1;
+    font-family: 'Montserrat Variable', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s ;
+}
+
+.nav-page:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.hero-overlay {
+    height: 100svh;
+    display: grid;
+    grid-template-rows: 7fr 1fr;
+}
+
+h1 {
+    font-family: 'Playfair Display Variable', serif;
+    font-weight: 600;
+    font-size: clamp(8rem, 10vw, 100rem);
+    color: var(--primary-color);
+    grid-row: 1;
+    align-self: end;
+    padding: 0 0 3vh 2vw;
+}
+
+.hero-overlay a {
+    align-self: center;
+    justify-self: center;
+}
+
+.hero-overlay img {
+    width: 5rem;
+    filter: sepia(10%) saturate(166%) hue-rotate(5deg) brightness(95%) contrast(99%);
+}
+
+
+
+.featured {
+    padding: 8vw 0 0 10vw;
+}
+
+h2 {
+    font-family: 'Playfair Display Variable', serif;
+    font-weight: 500;
+    font-size: 4vw;
+    margin: 0 0 3vw 0;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+
+.card {
+    position: relative;
+    border: solid 1px var(--secondary-color);
+    width: 30vw;
+    aspect-ratio: 5/3;
+    border-radius: 12px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/media/images/placeholder.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat Variable';
+    font-weight: 600;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+    box-shadow: 0 0.3vw 0.3vw rgb(150, 150, 150);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    scale: 98%;
+    box-shadow: 0 3px 3px rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+.article {
+    width: 14vw;
+    height: 20vw
+}
+
+h3 {
+    font-size: 4vw;
+    padding: 0 0 1vh 0;
+}
+
+.article h3 {
+    font-size: 2.4vw;
+    width: 90%;
+}
+
+.article p {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.date-range {
+    font-size: 2vw;
+    padding: 0.5vw 0 0 0.5vw;
+}
+
+.booking-cta {
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 2vw;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.booking-cta a {
+    display: inline-block;
+    padding: 1vw;
+    color: inherit;
+}
+
+.booking-cta a:visited {
+    color: inherit;
+}
+
+.booking-cta:hover {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+footer {
+    padding: 10vw 0 0 0;
+}
+
+footer hr {
+    width: 60%;
+}
+
+.footer-content {
+    padding: 4vw 0 5vw 0;
+    text-align: center;
+    font-family: 'Montserrat Variable', sans-serif;
+}
+
+@media (max-width: 820px) {
+
+}
