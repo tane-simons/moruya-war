@@ -125,7 +125,7 @@ h2 {
     width: 30vw;
     aspect-ratio: 5/3;
     border-radius: 12px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/media/images/placeholder.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/images/placeholder.png);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Montserrat Variable';
