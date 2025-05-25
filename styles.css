@@ -158,6 +158,14 @@ h2 {
     cursor: pointer;
 }
 
+#vp-celebrations-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/images/tour.JPG);
+}
+
+#vp-dance-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/images/dance.png);
+}
+
 .article {
     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(media/images/parchment.jpg);
     background-repeat: no-repeat;
@@ -171,7 +179,7 @@ h2 {
 }
 
 h3 {
-    font-size: 4vw;
+    font-size: 3vw;
     padding: 0 0 1vh 0;
 }
 
@@ -262,7 +270,7 @@ footer hr {
     font-size: 1rem;
 }
 
-.footer-content a[href^="tel"], .footer-content a[href^="mailto:"], a, a:visited {
+.footer-content a, .footer-content a:visited {
     color: var(--secondary-color);
     font-weight: 600;
     text-decoration: underline;
