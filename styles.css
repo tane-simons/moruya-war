@@ -27,6 +27,10 @@ body {
     background-color: var(--primary-color);
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 .hero {
     height: 100svh;
 }
@@ -52,11 +56,16 @@ header {
     transition: background-color 0.3s linear;
 }
 
+#hamburger {
+    display: none;
+}
+
+
 nav ul {
     display: flex;
     flex-direction: row;
     gap: 3vw;
-    padding: 1vw;
+    padding: 1.5vw;
 }
 
 .nav-page {
@@ -83,7 +92,7 @@ nav ul {
 h1 {
     font-family: 'Playfair Display Variable', serif;
     font-weight: 600;
-    font-size: clamp(8rem, 10vw, 100rem);
+    font-size: clamp(6.5rem, 10vw, 100rem);
     color: var(--primary-color);
     grid-row: 1;
     align-self: end;
@@ -119,9 +128,14 @@ h2 {
     gap: 5vw;
 }
 
+.article-container {
+    gap: 5vw;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+
 .card {
     position: relative;
-    border: solid 1px var(--secondary-color);
     width: 30vw;
     aspect-ratio: 5/3;
     border-radius: 12px;
@@ -140,13 +154,19 @@ h2 {
 
 .card:hover {
     scale: 98%;
-    box-shadow: 0 3px 3px rgb(150, 150, 150);
+    box-shadow: 0 0.1vw 0.1vw rgb(150, 150, 150);
     cursor: pointer;
 }
 
 .article {
-    width: 14vw;
-    height: 20vw
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(media/images/parchment.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--secondary-color);
+    width: 15rem;
+    height: auto;
+    aspect-ratio: 3/4;
+    display: flex;
 }
 
 h3 {
@@ -155,16 +175,38 @@ h3 {
 }
 
 .article h3 {
-    font-size: 2.4vw;
-    width: 90%;
+    font-size: clamp(1.5rem, 2vw, 5rem);
+    font-weight: 520;
+    padding: 0 0 2vh 0;
 }
 
-.article p {
+.article-description {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    height: 70%;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+}
+
+.read-more {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 1.5vw;
-    font-weight: 400;
+    bottom: 1.5vw;
+    right: 1.5vw;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 600;
+    padding: 3%;
+    border: 0.1vw solid transparent;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.read-more:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0.1vw solid var(--secondary-color);
 }
 
 .date-range {
@@ -211,11 +253,165 @@ footer hr {
 }
 
 .footer-content {
-    padding: 4vw 0 5vw 0;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4vw 10vw 5vw 10vw;
     font-family: 'Montserrat Variable', sans-serif;
+    font-size: 1rem;
+}
+
+a[href^="tel"] {
+    color: var(--secondary-color);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+
+.signature a, .signature a:visited {
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--secondary-color)
 }
 
 @media (max-width: 820px) {
 
+    header {
+        height: 8vh;
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile-nav {
+    position: fixed;
+    inset: 0;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1; /* make sure it's above everything */
 }
+
+    #mobile-nav.active {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    #mobile-nav ul {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #mobile-nav.active ul {
+        display: flex;
+    }
+
+    #hamburger {
+        font-family: 'Montserrat Variable';
+        color: var(--primary-color);
+        font-weight: 100;
+        font-size: clamp(4rem, 20vw, 5rem);
+        padding: 0 3vw;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .hero-overlay {
+        grid-template-rows: 4fr 1fr;
+    }
+
+    h1 {
+        align-self: center;
+        font-size: clamp(1rem, 18vw, 8rem);
+        padding: 14vh 4vw 0 4vw;
+        text-align: center;
+    }
+
+    .hero-overlay img {
+        width: 3rem;
+    }
+
+    h2 {
+        font-size: clamp(2rem, 10vw, 4rem);
+        margin: 0 0 8vw 0;
+        text-align: center;
+    }
+
+    .featured {
+        padding: 18vw 0 0 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: auto;
+        border-radius: 0;
+        padding: 8vw;
+        box-shadow: none;
+    }
+
+    .card:hover {
+        scale: 100%;
+    }
+
+    h3 {
+        font-size: 8vw;
+    }
+
+    .date-range {
+        font-size: 5vw;
+    }
+
+    .booking-cta {
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        padding: 2vw 4vw;
+        right: 4vw;
+        bottom: 4vw;
+    }
+
+    .article-container {
+        padding: 0 0 0 10vw;
+        gap: 10vw;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .article {
+        width: 15rem;
+        height: auto;
+        border-radius: 12px;
+        padding: 2rem;
+    }
+
+    .article h3 {
+        padding: 0 0 3vw 0;
+    }
+
+    .read-more {
+        bottom: 4vw;
+        right: 4vw;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 4vw;
+    }
+}   

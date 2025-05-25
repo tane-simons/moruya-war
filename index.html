@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,10 @@
     </head>
     <body>
         <header>
-            <nav>
+            <p id="hamburger">
+                =
+            </p>
+            <nav id="mobile-nav">
                 <ul>
                     <li><a href="" class="nav-page">History</a></li>
                     <li><a href="" class="nav-page">Events</a></li>
@@ -25,7 +28,7 @@
         </header>
         <main>
             <div class="hero">
-                <video autoplay muted loop>
+                <video autoplay muted loop playsinline>
                     <source src="media/bg-video.mp4" type="video/mp4">
                 </video>
                 <div class="hero-overlay">
@@ -33,7 +36,7 @@
                         When War Came<br>to Moruya
                     </h1>
                     <a href="#jump">
-                        <img src="media/icons/chevron-down.svg">
+                        <img src="media/icons/chevron-down.svg" alt="scroll down">
                     </a>
                 </div>
             </div>
@@ -42,7 +45,7 @@
                 <h2>Upcoming Events</h2>
                 <div class="card-container">
 
-                    <div class="card" data-link="events/vp-day.html"">
+                    <div class="card" data-link="events/vp-day.html">
                         <h3>
                             VP Day
                         </h3>
@@ -57,7 +60,7 @@
                         </div>
                     </div>
 
-                    <div class="card" data-link="events/example.html"">
+                    <div class="card" data-link="events/example.html">
                         <h3>
                             Event 2
                         </h3>
@@ -76,27 +79,77 @@
             </section>
             <section class="featured">
                 <h2>Featured Articles</h2>
-                <div class="card-container">
+                <div class="card-container article-container">
 
-                    <div class="card article" data-link="articles/example.html"">
+                    <div class="card article" data-link="articles/example.html">
                         <h3>
                             SS. Iron Knight
                         </h3>
-                        <p>
-                            Read More >
+                        <div class="article-description">
+                            <p>
+                                On February 8, around 20 kilometers south of Montague Island, the Japanese
+submarine I-21 spotted the convoy. Commanded by Matsumura Kanji, I-21 had already
+experienced great success in the war.
+                            </p>
+                        </div>
+                        <p class="read-more">
+                            Read More &rarr;
                         </p>
                     </div>
-
-                    <div class="card article" data-link="articles/example.html"">
+                    <div class="card article" data-link="articles/example.html">
                         <h3>
                             Article 2
                         </h3>
+                        <div class="article-description">
+                            <p>
+                                A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article
+                            </p>
+                        </div>
+                        <p class="read-more">
+                            Read More &rarr;
+                        </p>
                     </div>
 
-                    <div class="card article" data-link="articles/example.html"">
+                    <div class="card article" data-link="articles/example.html">
                         <h3>
                             Article 3
                         </h3>
+                        <div class="article-description">
+                            <p>
+                                A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article
+                            </p>
+                        </div>
+                        <p class="read-more">
+                            Read More &rarr;
+                        </p>
+                    </div>
+
+                    <div class="card article" data-link="articles/example.html">
+                        <h3>
+                            Article 4 with a long title
+                        </h3>
+                        <div class="article-description">
+                            <p>
+                                A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article
+                            </p>
+                        </div>
+                        <p class="read-more">
+                            Read More &rarr;
+                        </p>
+                    </div>
+
+                    <div class="card article" data-link="articles/example.html">
+                        <h3>
+                            Article 5 with a long title
+                        </h3>
+                        <div class="article-description">
+                            <p>
+                                A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article, A brief description on the article
+                            </p>
+                        </div>
+                        <p class="read-more">
+                            Read More &rarr;
+                        </p>
                     </div>
 
                 </div>
@@ -105,7 +158,20 @@
         <footer>
             <hr>
             <div class="footer-content">
-                <p>Designed by Tāne Simons</p>
+                <div class="contact"> 
+                    <p>
+                        Gary Traynor
+                    </p>
+                    <p>
+                        0400000000
+                    </p>
+                </div>
+                <p class="signature">
+                    Site handcrafted by <a href="https://tanesimons.com" target="_blank">Tane Simons</a>
+                </p>
+                <p>
+                        ABN: 000000000
+                    </p>
             </div>
         </footer>
     </body>
