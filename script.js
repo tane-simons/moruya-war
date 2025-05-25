@@ -1,12 +1,12 @@
 window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
+    const homeHeader = document.getElementById('home-header');
     const scrollY = window.scrollY;
     const transparency = scrollY/100;
 
-    header.style.backgroundColor = `rgba(18, 18, 18, ${transparency})`;
+    homeHeader.style.backgroundColor = `rgba(18, 18, 18, ${transparency})`;
 });
 
-document.querySelectorAll('.card').forEach(card => {
+document.querySelectorAll('.events-card').forEach(card => {
     card.addEventListener('click', () => {
         const link = card.getAttribute('data-link');
         if (link) {
