@@ -86,7 +86,8 @@ nav ul {
 .nav-page {
     text-transform: uppercase;
     border-bottom: 2px solid transparent;
-    transition: border-bottom 0.5s ;
+    transition: border-bottom 0.5s;
+    color: var(--primary-color);
 }
 
 .nav-page:hover {
