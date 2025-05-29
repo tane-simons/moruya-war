@@ -1,6 +1,7 @@
 :root {
     --primary-color: #efebe0;
     --secondary-color: #121212;
+    --accent-color: #983323;
 }
 
 @font-face {
@@ -59,6 +60,10 @@ header {
     font-family: 'Montserrat Variable', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+header a {
     color: var(--primary-color);
 }
 
@@ -353,6 +358,65 @@ footer hr {
     padding: 0 0 5vw 0;
 }
 
+/* ABOUT PAGE */
+
+#quote-container {
+    display: flex;
+    justify-content: center;
+}
+
+#about-quote {
+    font-family: 'Playfair Display Variable', serif;
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    line-height: 140%;
+    font-size: 2rem;
+    color: var(--accent-color);
+    max-width: 60rem;
+}
+
+/* CONTACT PAGE */
+
+#contact-page h1 {
+    font-family: 'Montserrat Variable', sans-serif;
+    font-size: 5rem;
+}
+
+#contact-container {
+    display: grid;
+    grid-template-columns: 24rem auto;
+    gap: 3rem;
+}
+
+#contact-container h2 {
+    font-family: 'Montserrat Variable', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin: 1rem 0;
+}
+
+#contact-container a {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    transition: border-bottom 0.1s ease;
+    display: block;
+    padding: 0.2rem 0;
+}
+
+#contact-container a:visited {
+    color: var(--secondary-color);
+}
+
+#contact-container a:hover {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+#wwctm-contact {
+    border-right: 1px solid var(--secondary-color);
+}
+
 /* MOBILE STYLES */
 @media (max-width: 820px) {
 
@@ -395,6 +459,14 @@ footer hr {
 
     #mobile-nav.active ul {
         display: flex;
+    }
+
+    .nav-page:hover {
+        background-color: var(--primary-color);
+        border-radius: 12px;
+        color: var(--secondary-color);
+        padding: 0.6rem 1.5rem;
+        border-bottom: none;
     }
 
     .logo {
@@ -542,7 +614,30 @@ footer hr {
     }
 
     .subpage h1 {
-        padding: 10vw 0;
+        padding: 4rem 0 3rem 0;
     }
 
+    /* HISTORY PAGE */
+
+    #history-page-container > :nth-child(n+4) {
+    display: flex;
+    }
+
+    /* CONTACT PAGE */
+
+    #contact-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    text-align: center;
+    }
+
+    #contact-container h2 {
+        padding: 0;
+    }
+
+    #wwctm-contact {
+        border-right: none;
+        padding: 0 0 3rem 0;
+        border-bottom: 1px solid var(--secondary-color);
+    }
 }

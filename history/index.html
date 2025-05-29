@@ -3,84 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>When War Came to Moruya</title>
-        <meta name="description" content="'When War Came to Moruya' aims to preserve Moruya’s wartime history, honouring the service and sacrifice of the allied soldiers, sailors, and airmen who served here.">
-        <meta name="keywords" content="when war came to moruya, moruya war, moruya, war, museum, no11, raaf, royal australian air force, durenbee, iron knight, u-862, ww2, ww1, bunker, no11 operational base unit">
+        <title> Events | When War Came to Moruya</title>
+        <meta name="description" content="Explore the events of 'When War Came to Moruya', from commemorations to concerts, celebrating the wartime history of Moruya">
         <meta name="author" content="Tāne Simons">
         <link rel="icon" href="media/logo.PNG" type="image/x-icon">
-        <link href="reset.css" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
-        <script data-goatcounter="https://moruyawar.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-        <script defer src="script.js"></script>
+        <link href="../reset.css" rel="stylesheet">
+        <link href="../styles.css" rel="stylesheet">
+        <script defer src="../script.js"></script>
     </head>
-    <body>
-        <header id="home-header">
+    <body class="subpage" id="history-page">
+        <header>
             <p id="hamburger">
                 =
             </p>
+            <a href="../index.html" class="logo">
+                WWCTM
+            </a>
             <nav id="mobile-nav">
                 <ul>
-                    <li><a href="history/index.html" class="nav-page">History</a></li>
-                    <li><a href="events/index.html" class="nav-page">Events</a></li>
-                    <li><a href="about.html" class="nav-page">About</a></li>
-                    <li><a href="contact.html" class="nav-page">Contact</a></li>
+                    <li><a href="./index.html" class="nav-page" id="current-nav">History</a></li>
+                    <li><a href="../events/index.html" class="nav-page">Events</a></li>
+                    <li><a href="../about.html" class="nav-page">About</a></li>
+                    <li><a href="../contact.html" class="nav-page">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <div class="hero">
-                <video autoplay muted loop playsinline>
-                    <source src="media/bg-video.mp4" type="video/mp4">
-                </video>
-                <div class="hero-overlay">
-                    <h1>
-                        When War Came<br>to Moruya
-                    </h1>
-                    <a href="#jump">
-                        <img src="media/icons/chevron-down.svg" alt="scroll down">
-                    </a>
-                </div>
-            </div>
-            <div id="jump"></div>
-            <section class="featured">
-                <h2>Upcoming Events</h2>
-                <div class="events-container">
-
-                    <div id="vp-dance-card" class="events-card" data-link="events/vp-day.html">
-                        <h3>
-                            VP Day Charity Concert
-                        </h3>
-                        <div class="date-range">
-                            <time datetime="2025-08-16T17:30+10:00">16th Aug 5:30pm</time>
-                        </div>
-                        <div class="booking-cta">
-                            <a href="https://www.eventbrite.com.au/e/moruya-vp-day-80th-anniversary-charity-concert-tickets-1375298568039?aff=oddtdtcreator">
-                                Book Tickets
-                            </a>
-                        </div>
-                    </div>
-
-                    <div id="vp-celebrations-card" class="events-card" data-link="events/example.html">
-                        <h3>
-                            Moruya VP Day Celebrations
-                        </h3>
-                        <div class="date-range">
-                            <time datetime="2025-08-15">15th Aug</time> -
-                            <time datetime="2025-08-17">17th Aug</time>
-                        </div>
-                        <div class="booking-cta">
-                            <a href="tel:+61449692401">
-                                Call to Reserve
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-            <section class="featured">
-                <h2>Featured Articles</h2>
-                <div class="article-container">
+            <h1>
+                History
+            </h1>
+            <div class="article-container" id="history-page-container">
 
                     <a class="article-card" href="">
                         <h3>
@@ -154,8 +106,7 @@ experienced great success in the war.
                         </p>
                     </div>
 
-                </div>
-            </section>
+            </div>
         </main>
         <footer>
             <hr>
