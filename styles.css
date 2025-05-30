@@ -390,7 +390,7 @@ footer hr {
 }
 
 #charity-concert-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../media/events/dance.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/events/dance.png);
 }
 
 .events-child-hero h1 {
