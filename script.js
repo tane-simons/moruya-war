@@ -53,12 +53,12 @@ window.addEventListener('scroll', () => {
             cta.style.position = 'fixed'
             cta.style.bottom = '5vw';
             cta.style.right = '5vw';
-            cta.style.transition = 'all 0.3s ease';
+            cta.style.transition = 'all 0.2s ease';
         } else {
             cta.style.position = 'relative';
             cta.style.bottom = '0';
             cta.style.right = '0';
-            cta.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+            cta.style.transition = 'background-color 0.2s ease, color 0.2s ease';
         }
     } else {
         if (scrollY > 260) {
@@ -68,7 +68,7 @@ window.addEventListener('scroll', () => {
             cta.style.width = '90vw';
             cta.style.padding = '1rem 0';
             cta.style.boxShadow = '0 1rem 4rem var(--secondary-color)';
-            cta.style.transition = 'background-color 0.3s ease, color 0.3s ease, right 0.3s ease';
+            cta.style.transition = 'background-color 0.2s ease, color 0.2s ease, right 0.2s ease';
         } else {
             cta.style.position = 'relative';
             cta.style.right = '0';
