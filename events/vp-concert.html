@@ -3,15 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Events | When War Came to Moruya</title>
+        <title> VP Day Charity Concert | When War Came to Moruya</title>
         <meta name="description" content="Explore the events of 'When War Came to Moruya', from commemorations to concerts, celebrating the wartime history of Moruya">
         <meta name="author" content="Tāne Simons">
         <link rel="icon" href="media/logo.PNG" type="image/x-icon">
         <link href="../reset.css" rel="stylesheet">
         <link href="../styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
         <script defer src="../script.js"></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     </head>
-    <body class="subpage" id="events-page">
+    <body class="events-child-page">
         <header>
             <p id="hamburger">
                 =
@@ -22,47 +24,57 @@
             <nav id="mobile-nav">
                 <ul>
                     <li><a href="../history/index.html" class="nav-page">History</a></li>
-                    <li><a href="./index.html" class="nav-page" id="current-nav">Events</a></li>
+                    <li><a href="./index.html" class="nav-page">Events</a></li>
                     <li><a href="../about.html" class="nav-page">About</a></li>
                     <li><a href="../contact.html" class="nav-page">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
+        <div class="events-child-hero" id="charity-concert-hero">
             <h1>
-                Events
+                VP Day Charity Concert
             </h1>
-            <div class="events-container">
-                <div id="vp-dance-card" class="events-card" data-link="vp-concert.html">
-                        <h3>
-                            VP Day Charity Concert
-                        </h3>
-                        <div class="date-range">
-                            <time datetime="2025-08-16T17:30+10:00">16th Aug 5:30pm</time>
-                        </div>
-                        <div class="booking-cta">
-                            <a href="https://www.eventbrite.com.au/e/moruya-vp-day-80th-anniversary-charity-concert-tickets-1375298568039?aff=oddtdtcreator" rel="noreferrer noopener" target="_blank">
-                                Book Tickets
-                            </a>
-                        </div>
-                    </div>
-
-                    <div id="vp-celebrations-card" class="events-card" data-link="events/example.html">
-                        <h3>
-                            Moruya VP Day Celebrations
-                        </h3>
-                        <div class="date-range">
-                            <time datetime="2025-08-15">15th Aug</time> -
-                            <time datetime="2025-08-17">17th Aug</time>
-                        </div>
-                        <div class="booking-cta">
-                            <a href="tel:+61449692401">
-                                Call to Reserve
-                            </a>
-                        </div>
-                    </div>
-
+            <a href="https://www.eventbrite.com.au/e/moruya-vp-day-80th-anniversary-charity-concert-tickets-1375298568039?aff=oddtdtcreator" id="events-child-cta" rel="noreferrer noopener" target="_blank">
+                Book Tickets &rsaquo;
+            </a>
+        </div>
+        <main>
+            <ol id="breadcrumbs">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                /
+                <li>
+                    <a href="./index.html">Events</a>
+                </li>
+                /
+                <li>
+                    <span>VP Day Charity Concert</span>
+                </li>
+            </ol>
+            <div class="events-child-content" id="events-child-date">
+                <h2>
+                    Date and Time
+                </h2>
+                <p datetime="2025-08-16T17:30+10:00">16th Aug 5:30pm - 7:30pm<br>Doors open at 5:30pm</p>
             </div>
+            <div class="events-child-content" id="events-child-description">
+                <h2>
+                    Info
+                </h2>
+                <p>
+                    Join us for a 1940s themed charity concert for the 80th Anniversary of Victory in the Pacific or VP Day! Hosted by the Moruya RSL Sub-Branch, you can look forward to the greatest hits of the era, including Vera Lynn, the Andrew Sisters and Glenn Miller! All performed by local artists! You can also look forward to comedy skits presented by the Moruya Red Door Theatre and a special perfomance by the Moruya BallroomConnection Group! Supper is included in ticket price, doors open at 5:30pm.
+                </p>
+            </div>
+            <div class="events-child-content" id="events-child-location">
+                <h2>
+                    Location
+                </h2>
+                <a href="geo:-35.9107,150.0778">
+                    RSL Memorial Hall, 11 Page Street, Moruya, NSW
+                </a>
+                <div id="map">
+                </div>
         </main>
         <footer>
             <hr>
