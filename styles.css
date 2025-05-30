@@ -2,6 +2,7 @@
     --primary-color: #efebe0;
     --secondary-color: #121212;
     --accent-color: #983323;
+    --white: #F4F3F2;
 }
 
 @font-face {
@@ -51,7 +52,7 @@ body.no-scroll {
 
 header {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -155,7 +156,6 @@ h2 {
     width: 25rem;
     aspect-ratio: 5/3;
     border-radius: 12px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/images/placeholder.png);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Montserrat Variable', sans-serif;
@@ -175,11 +175,11 @@ h2 {
 }
 
 #vp-celebrations-card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/images/tour.JPG);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/events/tour.JPG);
 }
 
 #vp-dance-card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/images/dance.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/events/dance.png);
 }
 
 .events-card h3 {
@@ -225,7 +225,7 @@ h2 {
 .article-card {
     position: relative;
     border-radius: 12px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(media/images/parchment.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(media/history/parchment.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Montserrat Variable', sans-serif;
@@ -283,7 +283,7 @@ h2 {
 }
 
 footer {
-    padding: 10vw 0 0 0;
+    padding: 5rem 0 0 0;
 }
 
 footer hr {
@@ -310,23 +310,30 @@ footer hr {
     display: flex;
     flex-direction: column;
     gap: 0.3vw;
+    grid-column: 1;
 }
 
 .signature {
     justify-self: center;
 }
 
-.fb-logo {
+.socials {
     justify-self: end;
+    display: flex;
+    gap: 2vw;
 }
 
-.fb-logo svg {
-    width: 2rem;
-    height: 2rem;
+.social-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
     }
 
-.fb-logo svg:hover {
+#fb-logo svg:hover {
         fill: #1669D1; 
+    }
+
+#yt-logo svg:hover {
+        fill: #FF0000; 
     }
 
 /* SUBPAGES */
@@ -358,7 +365,115 @@ footer hr {
     padding: 0 0 5vw 0;
 }
 
-/* ABOUT PAGE */
+/* HISTORY */
+
+/* EVENTS CHILD PAGES */
+
+.events-child-page {
+    color: var(--secondary-color);
+    font-family: 'Montserrat Variable', sans-serif;
+}
+
+.events-child-page main {
+    padding: 2rem 10rem 0 10rem;
+}
+
+.events-child-hero {
+    padding: 10vw 10rem 0 10rem;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#charity-concert-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../media/events/dance.png);
+}
+
+.events-child-hero h1 {
+    font-family: 'Montserrat Variable', sans-serif;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 6vw;
+    align-self: start;
+    padding: 0 0 3rem 0;
+}
+
+#events-child-cta {
+    color: var(--secondary-color);
+    font-family: 'Montserrat Variable', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background-color: var(--white);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0.2rem 1rem var(--secondary-color);
+    padding: 1rem 2rem;
+    margin: 0 0 2rem 0;
+    border-radius: 12px;
+    text-align: center;
+    width: fit-content;
+    z-index: 1;
+    transition: all 0.2s ease;
+}
+
+#events-child-cta:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+#events-child-cta:visited {
+    color: var(--secondary-color);
+}
+
+#events-child-cta:visited:hover {
+    color: var(--primary-color);
+}
+
+#breadcrumbs li {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+#breadcrumbs a:visited {
+    color: var(--secondary-color);
+}
+
+#breadcrumbs span {
+    font-weight: 500;
+}
+
+.events-child-page h2 {
+    font-family: 'Montserrat Variable', sans-serif;
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.events-child-content p, .events-child-content a, .events-child-content a:hover {
+    max-width: 75ch;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: var(--secondary-color);
+}
+
+#map {
+    margin: 1rem 0 0 0;
+    height: 50vh;
+    max-width: 50rem;
+    border: solid 2px var(--secondary-color);
+    border-radius: 12px;
+    z-index: 0;
+}
+
+/* ABOUT */
 
 #quote-container {
     display: flex;
@@ -400,7 +515,6 @@ footer hr {
 #contact-container a {
     color: var(--secondary-color);
     font-size: 1.2rem;
-    transition: border-bottom 0.1s ease;
     display: block;
     padding: 0.2rem 0;
 }
@@ -410,7 +524,7 @@ footer hr {
 }
 
 #contact-container a:hover {
-    border-bottom: 1px solid var(--secondary-color);
+    text-decoration: underline;
 }
 
 #wwctm-contact {
@@ -588,7 +702,7 @@ footer hr {
         justify-self: center;
     }
 
-    .fb-logo {
+    .socials {
         grid-row: 1;
         justify-self: center;
     }
@@ -621,6 +735,41 @@ footer hr {
 
     #history-page-container > :nth-child(n+4) {
     display: flex;
+    }
+
+    /* EVENTS CHILD PAGES */
+
+    .events-child-page, .events-child-page h1, .events-child-page h2 {
+        text-align: left;
+    }
+
+    .events-child-page main {
+        padding: 1.2rem 10vw 0 10vw;
+    }
+
+    .events-child-hero {
+        padding: 10vw 10vw 0 10vw;
+        height: 20rem;
+    }
+
+    .events-child-hero h1 {
+        font-size: 3rem;
+        padding: 0 0 2rem 0;
+    }
+
+    #breadcrumbs li {
+        font-size: 0.8rem;
+    }
+
+    .events-child-page h2 {
+        font-size: 1.5rem;
+        margin: 3rem 0 0.8rem 0;
+        padding: 0 0 0 0;
+    }
+
+    .events-child-content p, .events-child-content a, .events-child-content a:hover {
+        font-size: 1rem;
+        color: var(--secondary-color);
     }
 
     /* CONTACT PAGE */
