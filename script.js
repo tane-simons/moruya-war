@@ -80,10 +80,33 @@ window.addEventListener('scroll', () => {
     }
 });
 
-var map = L.map('map').setView([-35.9107, 150.0778], 17);
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-L.marker([-35.9107, 150.0778]).addTo(map)
-    .bindPopup('RSL Memorial Hall')
-    .openPopup();
+document.addEventListener('DOMContentLoaded', function () {
+    const concertMapEl = document.getElementById('concert-map');
+    const celebrationsMapEl = document.getElementById('celebrations-map');
+
+    if (concertMapEl) {
+        var concertMap = L.map('concert-map').setView([-35.9107, 150.0778], 17);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(concertMap);
+        L.marker([-35.9107, 150.0778]).addTo(concertMap)
+            .bindPopup('RSL Memorial Hall')
+            .openPopup();
+    }
+
+    if (celebrationsMapEl) {
+        var celebrationsMap = L.map('celebrations-map').setView([-35.9, 150.1], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(celebrationsMap);
+        L.marker([-35.9101, 150.0810]).addTo(celebrationsMap)
+            .bindPopup('CBD Tour Meeting Point')
+            .openPopup();
+        L.marker([-35.9011, 150.1365]).addTo(celebrationsMap)
+        .bindPopup('Moruya Bunkers')
+        .openPopup();
+        L.marker([-35.9044, 150.1147]).addTo(celebrationsMap)
+        .bindPopup('Moruya Granite Quarry')
+        .openPopup();
+    }
+});

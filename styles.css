@@ -464,7 +464,7 @@ footer hr {
     color: var(--secondary-color);
 }
 
-#map {
+#concert-map, #celebrations-map {
     margin: 1rem 0 0 0;
     height: 50vh;
     max-width: 50rem;
@@ -771,6 +771,10 @@ footer hr {
         font-size: 1rem;
         color: var(--secondary-color);
     }
+
+    .events-child-content a {
+    text-decoration: underline;
+}
 
     /* CONTACT PAGE */
 
