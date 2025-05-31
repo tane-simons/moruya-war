@@ -464,6 +464,10 @@ footer hr {
     color: var(--secondary-color);
 }
 
+.events-child-content date {
+    font-weight: 600;
+}
+
 #concert-map, #celebrations-map {
     margin: 1rem 0 0 0;
     height: 50vh;
