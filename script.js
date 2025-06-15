@@ -83,6 +83,7 @@ window.addEventListener('scroll', () => {
 document.addEventListener('DOMContentLoaded', function () {
     const concertMapEl = document.getElementById('concert-map');
     const celebrationsMapEl = document.getElementById('celebrations-map');
+    const ironKnightMapEl = document.getElementById('iron-knight-map');
 
     if (concertMapEl) {
         var concertMap = L.map('concert-map').setView([-35.9107, 150.0778], 17);
@@ -108,5 +109,15 @@ document.addEventListener('DOMContentLoaded', function () {
         L.marker([-35.9044, 150.1147]).addTo(celebrationsMap)
         .bindPopup('Moruya Granite Quarry')
         .openPopup();
+    }
+
+    if (ironKnightMapEl) {
+        var ironKnightMap = L.map('iron-knight-map').setView([-36.45, 150.23], 10);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(ironKnightMap);
+        L.marker([-36.45, 150.23]).addTo(ironKnightMap)
+            .bindPopup('S.S. Iron Knight')
+            .openPopup();
     }
 });
