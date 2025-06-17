@@ -121,3 +121,37 @@ document.addEventListener('DOMContentLoaded', function () {
             .openPopup();
     }
 });
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.querySelector('.lightbox .close');
+
+    document.querySelectorAll('.img-and-desc img').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+        lightboxImg.alt = '';
+    });
+
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+        lightboxImg.alt = '';
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            lightbox.style.display = 'none';
+            lightboxImg.src = '';
+            lightboxImg.alt = '';
+        }
+    })
+
+

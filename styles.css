@@ -259,7 +259,6 @@ h2 {
 
 .article-description {
     font-weight: 300;
-    font-size: 1.2rem;
     line-height: 1.2;
     height: 70%;
     -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
@@ -482,12 +481,20 @@ footer hr {
 
 /* HISTORY CHILD PAGE */
 .history-child-page main {
-    padding: 10rem 10vw 0 10vw;
+    padding: 10vw 10vw 0 10vw;
 }
+
 .history-child-page h1 {
     color: var(--secondary-color);
     font-size: 6rem;
-    padding: 0 0 1rem 0;
+    padding: 1rem 0;
+}
+
+.author {
+    font-family: 'Montserrat Variable', sans-serif;
+    font-weight: 550;
+    font-size: 1rem;
+
 }
 
 .article-container {
@@ -515,7 +522,8 @@ footer hr {
     font-style: italic;
     text-align: center;
     align-self: center;
-    width: 200ch;
+    width: 80vw;
+    max-width: 65ch;
     line-height: 2;
 }
 
@@ -530,13 +538,14 @@ footer hr {
     border-radius: 12px;
     max-width: 40vw;
     background-color: var(--secondary-color);
+    overflow: hidden;
 }
 
 .img-and-desc img {
     width: 100%;
-    border-radius: 12px 12px 0 0;
     object-fit: cover;
     object-position: top;
+
 }
 
 .caption {
@@ -577,6 +586,40 @@ thead th, td{
 
 td {
     font-size: 0.8rem;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+#lightbox-img {
+    border-radius: 12px;
+    width: 100%;
+}
+
+.close {
+    color: var(--primary-color);
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    cursor: pointer;
+    text-shadow: 0 0 5px var(--secondary-color)
 }
 
 /* ABOUT */
