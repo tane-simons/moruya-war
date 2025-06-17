@@ -209,6 +209,7 @@ h2 {
 
 .booking-cta a {
     display: inline-block;
+
     color: inherit;
 }
 
@@ -420,10 +421,27 @@ footer hr {
     transition: all 0.2s ease;
 }
 
+#events-child-cta, .booking-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#events-child-cta img, .booking-cta img {
+    filter: invert(0%) sepia(9%) saturate(1669%) hue-rotate(117deg) brightness(151%) contrast(86%);
+    scale: 80%;
+    transition: all 0.2s ease;
+}
+
+
 #events-child-cta:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
+}
+
+#events-child-cta:hover img, .booking-cta:hover img {
+    filter: invert(91%) sepia(8%) saturate(430%) hue-rotate(337deg) brightness(108%) contrast(87%);
 }
 
 #events-child-cta:visited {
@@ -497,6 +515,11 @@ footer hr {
 
 }
 
+.article-content {
+    display: flex;
+    flex-direction: column;
+}
+
 .text-and-img {
     display: flex;
     flex-direction: row;
@@ -520,6 +543,13 @@ footer hr {
     width: 80vw;
     max-width: 65ch;
     line-height: 2;
+    margin: 2rem; 
+}
+
+.article-quote span {
+    display: block;
+    margin: 1rem 0 0 0;
+    font-weight: 600;
 }
 
 .img-grid {
@@ -628,7 +658,7 @@ td {
     font-family: 'Playfair Display Variable', serif;
     font-style: italic;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
     line-height: 140%;
     font-size: 2rem;
     color: var(--accent-color);
@@ -899,6 +929,10 @@ td {
     .events-child-hero h1 {
         font-size: 3rem;
         padding: 0 0 2rem 0;
+    }
+
+    #events-child-cta {
+        justify-content: center;
     }
 
     #breadcrumbs li {
