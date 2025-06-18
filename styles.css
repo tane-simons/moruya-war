@@ -482,10 +482,22 @@ footer hr {
     font-size: 1.2rem;
     line-height: 1.2;
     color: var(--secondary-color);
+    margin: 0 0 1rem 0;
 }
 
 .events-child-content date {
     font-weight: 600;
+}
+
+#events-child-description p a {
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: none;
+    transition: border-bottom 0.2s ease;
+}
+
+#events-child-description p a:hover {
+    border-bottom: solid 1px var(--secondary-color);
 }
 
 #concert-map, #celebrations-map {
