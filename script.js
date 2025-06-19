@@ -84,6 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const concertMapEl = document.getElementById('concert-map');
     const celebrationsMapEl = document.getElementById('celebrations-map');
     const ironKnightMapEl = document.getElementById('iron-knight-map');
+    const bunkerMapEl = document.getElementById('bunker-map');
+
 
     if (concertMapEl) {
         var concertMap = L.map('concert-map').setView([-35.9107, 150.0778], 17);
@@ -118,6 +120,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }).addTo(ironKnightMap);
         L.marker([-36.45, 150.23]).addTo(ironKnightMap)
             .bindPopup('S.S. Iron Knight')
+            .openPopup();
+    }
+
+    if (bunkerMapEl) {
+        var bunkerMap = L.map('bunker-map').setView([-35.9011, 150.1365], 16);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(bunkerMap);
+        L.marker([-35.9011, 150.1365]).addTo(bunkerMap)
+            .bindPopup('WW2 Bunkers')
             .openPopup();
     }
 });
