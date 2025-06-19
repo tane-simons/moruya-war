@@ -21,6 +21,10 @@
     src: url(https://cdn.jsdelivr.net/fontsource/fonts/montserrat:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
 }
 
+b {
+    font-weight: 600;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -180,6 +184,10 @@ h2 {
 
 #vp-dance-card {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/events/dance.png);
+}
+
+#personal-bunker-tour-card {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/events/personal-tour.png);
 }
 
 .events-card h3 {
@@ -391,10 +399,6 @@ footer hr {
     background-repeat: no-repeat;
 }
 
-#charity-concert-hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/events/dance.png);
-}
-
 .events-child-hero h1 {
     font-family: 'Montserrat Variable', sans-serif;
     font-weight: 600;
@@ -491,16 +495,18 @@ footer hr {
 
 #events-child-description p a {
     font-weight: 500;
-    text-decoration: none;
-    border-bottom: none;
-    transition: border-bottom 0.2s ease;
 }
 
-#events-child-description p a:hover {
+#events-child-location a, #events-child-bookings a, #events-child-description p a {
+    transition: border-bottom 0.1s ease;
+    text-decoration: none;
+}
+
+#events-child-description p a:hover, #events-child-location a:hover, #events-child-bookings p a:hover {
     border-bottom: solid 1px var(--secondary-color);
 }
 
-#concert-map, #celebrations-map {
+#concert-map, #celebrations-map, #bunker-map {
     margin: 1rem 0 0 0;
     height: 50vh;
     max-width: 50rem;
