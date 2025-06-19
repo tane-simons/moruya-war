@@ -169,7 +169,7 @@ h2 {
     flex-direction: column;
     padding: 2rem;
     box-shadow: 0 0.3rem 0.3rem rgb(150, 150, 150);
-    transition: all 0.3s ease;
+    transition: scale 0.3s ease, box-shadow 0.3s ease;
 }
 
 .events-card:hover {
@@ -211,13 +211,12 @@ h2 {
     border-radius: 10px;
     text-align: center;
     border: 2px solid transparent;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
     padding: 0.7rem 1.2rem;
 }
 
 .booking-cta a {
     display: inline-block;
-
     color: inherit;
 }
 
@@ -246,7 +245,7 @@ h2 {
     flex-direction: column;
     padding: 1.5rem;
     box-shadow: 0 0.2rem 0.2rem rgb(150, 150, 150);
-    transition: all 0.3s ease;
+    transition: scale 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
 
@@ -287,7 +286,7 @@ h2 {
     padding: 0.8rem 1.2rem;
     border: 2px solid transparent;
     border-radius: 12px;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
@@ -546,7 +545,7 @@ footer hr {
     display: flex;
     flex-direction: row;
     gap: 5vw;
-    margin: 2rem 0 0 0;
+    margin: 2rem 0 4rem 0;
 }
 
 .article-desc, .article-quote {
@@ -556,6 +555,17 @@ footer hr {
     color: var(--secondary-color);
     max-width: 75ch;
     width: 35vw;
+}
+
+.article-desc a {
+    font-weight: 600;
+    font-family: 'Montserrat Variable';
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.article-desc a:visited {
+    color: var(--secondary-color);
 }
 
 .article-quote {
@@ -586,6 +596,7 @@ footer hr {
     max-width: 40vw;
     background-color: var(--secondary-color);
     overflow: hidden;
+    height: fit-content;
 }
 
 .img-and-desc img {
@@ -671,20 +682,15 @@ td {
 
 /* ABOUT */
 
-#quote-container {
-    display: flex;
-    justify-content: center;
+#about-page h2 {
+    margin: 2rem 0 0 0;
+    color: var(--accent-color);
 }
 
-#about-quote {
-    font-family: 'Playfair Display Variable', serif;
-    font-style: italic;
-    font-weight: 400;
-    text-align: left;
-    line-height: 140%;
+#about-page h3 {
+    font-family: 'Montserrat Variable', sans-serif;
     font-size: 2rem;
-    color: var(--accent-color);
-    max-width: 60rem;
+    margin: 3rem 0 0 0;
 }
 
 /* CONTACT PAGE */
@@ -1000,12 +1006,6 @@ td {
         width: 100%;
     }
 
-    .img-grid {
-        flex-direction: column;
-        width: 80vw;
-        gap: 10vw;
-    }
-
     #iron-knight-map {
         height: 60vw;
         width: 100%;
@@ -1018,6 +1018,17 @@ td {
     thead th, td{
         padding: 2vw 1vw;
         line-height: 1.2;
+    }
+
+    /* ABOUT PAGE */
+
+    #about-page h2 {
+        margin: 0;
+    }
+
+    #about-page h3 {
+        font-size: 1.7rem;
+        text-align: center;
     }
 
     /* CONTACT PAGE */
