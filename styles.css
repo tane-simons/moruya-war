@@ -25,6 +25,10 @@ b {
     font-weight: 600;
 }
 
+i {
+    font-style: italic;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -685,6 +689,10 @@ td {
 #about-page h2 {
     margin: 2rem 0 0 0;
     color: var(--accent-color);
+}
+
+#about-page .article-quote {
+    text-align: left;
 }
 
 #about-page h3 {
