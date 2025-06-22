@@ -237,7 +237,6 @@ h2 {
 .article-card {
     position: relative;
     border-radius: 12px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(media/history/parchment.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Montserrat Variable', sans-serif;
@@ -254,11 +253,15 @@ h2 {
 }
 
 #iron-knight-card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(media/history/iron-knight/iron-knight.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/history/iron-knight/iron-knight.png);
 }
 
 #wartime-sax-card {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(media/history/wartime-sax/peter-anderson.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/history/wartime-sax/peter-anderson.png);
+}
+
+#bhp-steel-card {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(media/history/bhp-steel/bhp-lettering.png);
 }
 
 .article-card:hover {
@@ -588,12 +591,6 @@ footer hr {
     font-weight: 600;
 }
 
-.img-grid {
-    display: flex;
-    width: 40vw;
-    gap: 1vw;
-}
-
 .img-and-desc {
     border: solid 2px var(--secondary-color);
     border-radius: 12px;
@@ -616,6 +613,12 @@ footer hr {
     font-weight: 300;
     line-height: 1.2;
     color: var(--primary-color);
+}
+
+.caption a, .caption a:visited {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 #iron-knight-map {
@@ -1012,6 +1015,10 @@ td {
 
     .article-desc {
         width: 100%;
+    }
+
+    .caption {
+        font-size: 0.9rem;
     }
 
     #iron-knight-map {
