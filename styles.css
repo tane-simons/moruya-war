@@ -350,6 +350,10 @@ footer hr {
     height: 2.5rem;
     }
 
+#ig-logo svg:hover {
+    fill: #e1306c;
+}
+
 #fb-logo svg:hover {
         fill: #1669D1; 
     }
