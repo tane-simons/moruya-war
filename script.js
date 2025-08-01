@@ -108,9 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
         L.marker([-35.9011, 150.1365]).addTo(celebrationsMap)
         .bindPopup('Moruya Bunkers')
         .openPopup();
-        L.marker([-35.9044, 150.1147]).addTo(celebrationsMap)
-        .bindPopup('Moruya Granite Quarry')
-        .openPopup();
     }
 
     if (ironKnightMapEl) {
